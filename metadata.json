@@ -1,0 +1,6 @@
+{
+  "name": "Pak & World Strikers - AI Taekwondo Coach",
+  "description": "Official AI Taekwondo Coach for Pakistan Taekwondo Club and World Strikers Taekwondo Academy, Al Khobar, Saudi Arabia. Kukkiwon-aligned belt & Dan preparation, interactive oral exams, Poomsae, Kyorugi, Korean terminology, and multilingual training in English, Urdu, and Arabic.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
