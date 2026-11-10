@@ -12,6 +12,7 @@ export interface Translations {
     poomsae: string;
     terminology: string;
     workout: string;
+    progress: string;
     academies: string;
   };
   welcome: {
@@ -87,6 +88,7 @@ export const translations: Record<Language, Translations> = {
       poomsae: 'Poomsae Vault',
       terminology: 'Korean Terminology',
       workout: 'Daily Training',
+      progress: 'Training Progress & Stats',
       academies: 'Our Clubs & Coaches',
     },
     welcome: {
@@ -160,6 +162,7 @@ export const translations: Record<Language, Translations> = {
       poomsae: 'پومسے انسائیکلوپیڈیا',
       terminology: 'کورین اصطلاحات',
       workout: 'روزانہ کی مشق',
+      progress: 'میری پیش رفت اور اعداد و شمار',
       academies: 'کلب اور کوچز',
     },
     welcome: {
@@ -234,6 +237,7 @@ export const translations: Record<Language, Translations> = {
       terminology: 'المصطلحات الكورية',
       workout: 'التدريب اليومي',
       academies: 'الأندية والمدربون',
+      progress: 'سجل التقدم والإحصائيات',
     },
     welcome: {
       greeting: 'تشاريوت! كيونغ ني! مرحباً بك في تدريب التايكوندو',

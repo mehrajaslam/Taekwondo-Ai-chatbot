@@ -16,6 +16,8 @@ import {
   Check,
   Bell,
   BellOff,
+  Headphones,
+  VolumeX,
 } from 'lucide-react';
 import { ChatMessage, Language, StudentProfile } from '../types';
 import { translations } from '../translations';
@@ -43,7 +45,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
       return {
         id: 'msg-init-1',
         sender: 'coach',
-        text: `چاریوت! گیونگ نیے! (Charyot! Gyeongnye! - باادب سلام)\n\nخوش آمدید! میں پاکستان تائیکوانڈو کلب اور ورلڈ سٹرائیکرز تائیکوانڈو اکیڈمی، الخبر (سعودی عرب) کا آفیشل اے آئی تائیکوانڈو کوچ ہوں۔ ہماری قیادت ہیڈ آف ٹیم جناب علی رضوان اور کوچز محمد فیضان، نعمان اور محترمہ شمائلہ نذیر کے پاس ہے۔\n\nمارشل آرٹس کے اصول کے مطابق، ہر نیا سفر تعارف سے شروع ہوتا ہے۔ برائے مہربانی اپنا نام بتائیں، اپنی موجودہ بیلٹ لیول (وائٹ بیلٹ سے 9ویں ڈان تک) کی تصدیق کریں، اور بتائیں کہ آج آپ کون سا سبق یا تکنیک سیکھنا چاہتے ہیں؟\n\n(آپ مائیکروفون کا بٹن آن کر کے اپنی آواز میں بھی بات کر سکتے ہیں!)`,
+        text: `چاریوت! گیونگ نیے! (Charyot! Gyeongnye! - باادب سلام)\n\nخوش آمدید! میں پاکستان تائیکوانڈو کلب اور ورلڈ سٹرائیکرز تائیکوانڈو اکیڈمی، الخبر (سعودی عرب) کا آفیشل اے آئی تائیکوانڈو کوچ ہوں۔ ہماری قیادت ہیڈ آف ٹیم جناب علی رضوان اور کوچز محمد فیضان، نعمان اور محترمہ شمائلہ نذیر کے پاس ہے۔\n\nمارشل آرٹس کے اصول کے مطابق، ہر نیا سفر تعارف سے شروع ہوتا ہے۔ برائے مہربانی اپنا نام بتائیں، اپنی موجودہ بیلٹ لیول (وائٹ بیلٹ سے 9ویں ڈان تک) کی تصدیق کریں، اور بتائیں کہ آج آپ کون سا سبق یا تکنیک سیکھنا چاہتے ہیں؟\n\n(دو طرفہ صوتی گفتگو فعال ہے: آپ بول کر سوال پوچھیں، میں بول کر جواب دوں گا!)`,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         suggestedReplies: [
           `میرا نام ${studentName} ہے، بیلٹ: ${belt}`,
@@ -58,7 +60,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
       return {
         id: 'msg-init-1',
         sender: 'coach',
-        text: `تشاريوت! كيونغ ني! (Charyot! Gyeongnye! - انتباه وتحية احترام)\n\nأهلاً وسهلاً بك في نادي باكستان للتايكوندو وأكاديمية سترايكرز العالمية للتايكوندو في الخبر، المملكة العربية السعودية! أنا مدربك الذكي الرسمي تحت إشراف رئيس الفريق الأستاذ علي رضوان والمدربين الأفاضل: محمد فيضان، نعمان، والأستاذة شميله نذير.\n\nوفقاً لتقاليد التايكوندو الأصيلة، نبدأ دائماً بالتعارف: يرجى تأكيد اسمك الكريم، ومستوى حزامك الحالي (من الحزام الأبيض حتى الدان التاسع)، وما هو الدرس أو التقنية التي تود أن نبدأ بها اليوم؟\n\n(يمكنك الضغط على زر الميكروفون للتحدث بصوتك مباشرة مع المدرب!)`,
+        text: `تشاريوت! كيونغ ني! (Charyot! Gyeongnye! - انتباه وتحية احترام)\n\nأهلاً وسهلاً بك في نادي باكستان للتايكوندو وأكاديمية سترايكرز العالمية للتايكوندو في الخبر، المملكة العربية السعودية! أنا مدربك الذكي الرسمي تحت إشراف رئيس الفريق الأستاذ علي رضوان والمدربين الأفاضل: محمد فيضان، نعمان، والأستاذة شميله نذير.\n\nوفقاً لتقاليد التايكوندو الأصيلة، نبدأ دائماً بالتعارف: يرجى تأكيد اسمك الكريم، ومستوى حزامك الحالي (من الحزام الأبيض حتى الدان التاسع)، وما هو الدرس أو التقنية التي تود أن نبدأ بها اليوم؟\n\n(المحادثة الصوتية المتبادلة ثنائية الاتجاه مفعلة: تحدث بصوتك وسأجيبك بصوتي مباشرة!)`,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         suggestedReplies: [
           `اسمي ${studentName}، مستواي: ${belt}`,
@@ -72,7 +74,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
     return {
       id: 'msg-init-1',
       sender: 'coach',
-      text: `Charyot! Gyeongnye! (Attention! Bow!)\n\nWelcome to Pakistan Taekwondo Club and World Strikers Taekwondo Academy, Al Khobar, Saudi Arabia! I am your official AI Taekwondo Coach under the leadership of our Head of Team Mr. Ali Rizwan, and Coaches Mr. Muhammad Faizan, Mr. Nauman, and Ms. Shumaila Nazeer.\n\nIn the spirit of martial arts discipline, let us begin our journey together: Please tell me your name, confirm your current belt or Dan level (from White Belt to 9th Dan), and let me know what specific technique, Poomsae, or Dan exam preparation you would like to master today!\n\n(You can also speak out loud by tapping the Microphone button below!)`,
+      text: `Charyot! Gyeongnye! (Attention! Bow!)\n\nWelcome to Pakistan Taekwondo Club and World Strikers Taekwondo Academy, Al Khobar, Saudi Arabia! I am your official AI Taekwondo Coach under the leadership of our Head of Team Mr. Ali Rizwan, and Coaches Mr. Muhammad Faizan, Mr. Nauman, and Ms. Shumaila Nazeer.\n\nIn the spirit of martial arts discipline, let us begin our journey together: Please tell me your name, confirm your current belt or Dan level (from White Belt to 9th Dan), and let me know what specific technique, Poomsae, or Dan exam preparation you would like to master today!\n\n(Two-way voice conversation is enabled: speak with your microphone, and I will speak back to you aloud!)`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       suggestedReplies: [
         `My name is ${studentName}, currently ${belt}`,
@@ -97,12 +99,21 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
   const [interimTranscript, setInterimTranscript] = useState<string>('');
   const [speechError, setSpeechError] = useState<string | null>(null);
   const [isSpeechSupported, setIsSpeechSupported] = useState<boolean>(true);
-  const [audioCueEnabled, setAudioCueEnabled] = useState<boolean>(true);
-  const wasVoiceInputRef = useRef<boolean>(false);
 
+  // Two-Way Voice Conversational Mode
+  const [twoWayVoiceMode, setTwoWayVoiceMode] = useState<boolean>(true);
+  const [isCoachSpeaking, setIsCoachSpeaking] = useState<boolean>(false);
+  const [audioCueEnabled, setAudioCueEnabled] = useState<boolean>(true);
+
+  const wasVoiceInputRef = useRef<boolean>(false);
+  const twoWayVoiceModeRef = useRef<boolean>(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<any>(null);
   const speakingTimeoutRef = useRef<any>(null);
+
+  useEffect(() => {
+    twoWayVoiceModeRef.current = twoWayVoiceMode;
+  }, [twoWayVoiceMode]);
 
   useEffect(() => {
     // Check Web Speech API browser availability
@@ -115,7 +126,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isLoading, isListening, interimTranscript]);
+  }, [messages, isLoading, isListening, interimTranscript, isCoachSpeaking]);
 
   // Clean up recognition and speech synthesis on unmount
   useEffect(() => {
@@ -145,43 +156,40 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
     }
     setIsListening(false);
     setIsSpeaking(false);
+    setIsCoachSpeaking(false);
     setInterimTranscript('');
     setSpeechError(null);
     setMessages([getInitialMessage(language, profile.name, profile.belt)]);
   };
 
-  // Toggle Web Speech API voice recording
-  const handleToggleVoiceRecording = () => {
+  // Start speech recognition listening
+  const startListening = () => {
     const SpeechRecognition =
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
       setSpeechError(
-        'The Web Speech API is not supported in this browser. Please use Google Chrome, Microsoft Edge, or Safari.'
+        'The Web Speech API is not supported in this browser. Please use Chrome, Edge, or Safari.'
       );
       return;
     }
 
-    // If currently listening, stop the recognition
-    if (isListening) {
+    // Stop coach audio if currently speaking before listening
+    stopSpeaking();
+    setIsCoachSpeaking(false);
+
+    setSpeechError(null);
+    setInterimTranscript('');
+
+    try {
       if (recognitionRef.current) {
         try {
-          recognitionRef.current.stop();
+          recognitionRef.current.abort();
         } catch (e) {
           // ignore
         }
       }
-      setIsListening(false);
-      setIsSpeaking(false);
-      return;
-    }
 
-    // Reset error state and stop any audio synthesis
-    setSpeechError(null);
-    setInterimTranscript('');
-    stopSpeaking();
-
-    try {
       const recognition = new SpeechRecognition();
       recognitionRef.current = recognition;
 
@@ -189,7 +197,6 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
       recognition.interimResults = true;
       recognition.maxAlternatives = 1;
 
-      // Select speech recognition language matched to user selection
       if (language === 'ur') {
         recognition.lang = 'ur-PK';
       } else if (language === 'ar') {
@@ -202,6 +209,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
         setIsListening(true);
         setIsSpeaking(false);
         setSpeechError(null);
+        wasVoiceInputRef.current = true;
       };
 
       recognition.onspeechstart = () => {
@@ -228,6 +236,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
 
       recognition.onresult = (event: any) => {
         setIsSpeaking(true);
+        wasVoiceInputRef.current = true;
         if (speakingTimeoutRef.current) clearTimeout(speakingTimeoutRef.current);
         speakingTimeoutRef.current = setTimeout(() => {
           setIsSpeaking(false);
@@ -265,21 +274,18 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
         console.warn('Web Speech API recognition error:', event.error);
         if (event.error === 'not-allowed' || event.error === 'service-not-allowed') {
           setSpeechError(
-            'Microphone access denied. Please click the lock or camera icon in your browser address bar, set Microphone to "Allow", and try again.'
+            'Microphone access denied. Please allow microphone permissions in your browser address bar and try again.'
           );
           setIsListening(false);
           setIsSpeaking(false);
         } else if (event.error === 'no-speech') {
-          // no speech detected in interval, stay listening or notify
           setIsSpeaking(false);
         } else if (event.error === 'network') {
-          setSpeechError(
-            'Speech recognition network error. Please check your internet connection or try again.'
-          );
+          setSpeechError('Speech recognition network error. Please verify connection and retry.');
           setIsListening(false);
           setIsSpeaking(false);
         } else if (event.error !== 'aborted') {
-          setSpeechError(`Speech recognition error: ${event.error}`);
+          setSpeechError(`Speech recognition: ${event.error}`);
           setIsListening(false);
           setIsSpeaking(false);
         }
@@ -293,9 +299,31 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
       recognition.start();
     } catch (err: any) {
       console.error('Failed to start Web Speech API:', err);
-      setSpeechError(err.message || 'Failed to initialize microphone access.');
+      setSpeechError(err.message || 'Failed to start microphone.');
       setIsListening(false);
       setIsSpeaking(false);
+    }
+  };
+
+  // Stop speech recognition
+  const stopListening = () => {
+    if (recognitionRef.current) {
+      try {
+        recognitionRef.current.stop();
+      } catch (e) {
+        // ignore
+      }
+    }
+    setIsListening(false);
+    setIsSpeaking(false);
+  };
+
+  // Toggle Web Speech API voice recording
+  const handleToggleVoiceRecording = () => {
+    if (isListening) {
+      stopListening();
+    } else {
+      startListening();
     }
   };
 
@@ -311,14 +339,8 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
 
   const handleSendMessage = async (textToSend?: string) => {
     // If speech recognition is active, stop it before sending
-    if (isListening && recognitionRef.current) {
-      try {
-        recognitionRef.current.stop();
-      } catch (e) {
-        // ignore
-      }
-      setIsListening(false);
-      setIsSpeaking(false);
+    if (isListening) {
+      stopListening();
     }
 
     const messageContent = (textToSend || inputText).trim();
@@ -328,6 +350,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
     setActiveSpeechMsgId(null);
     setSpeechError(null);
     setInterimTranscript('');
+    setIsCoachSpeaking(false);
 
     const userMessage: ChatMessage = {
       id: `msg-${Date.now()}`,
@@ -357,7 +380,6 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
       if (wasVoiceInputRef.current && audioCueEnabled) {
         playCoachResponseChime();
       }
-      wasVoiceInputRef.current = false;
 
       const coachMessage: ChatMessage = {
         id: `coach-${Date.now()}`,
@@ -372,6 +394,32 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
         ...prev,
         completedLessons: prev.completedLessons + 1,
       }));
+
+      // TWO-WAY VOICE CONVERSATION LOOP:
+      // When two-way voice mode is active, Coach speaks the answer aloud,
+      // and when finished, automatically re-opens the microphone for the student!
+      if (twoWayVoiceModeRef.current) {
+        setIsCoachSpeaking(true);
+        speakText(
+          coachMessage.text,
+          language,
+          () => {
+            // Callback when Coach finishes speaking
+            setIsCoachSpeaking(false);
+            if (twoWayVoiceModeRef.current) {
+              // Gentle pause of 500ms before re-opening mic to avoid self-echo
+              setTimeout(() => {
+                startListening();
+              }, 500);
+            }
+          },
+          () => {
+            setIsCoachSpeaking(true);
+          }
+        );
+      }
+
+      wasVoiceInputRef.current = false;
     } catch (err) {
       console.error('Chat error:', err);
       const fallbackMsg: ChatMessage = {
@@ -420,8 +468,33 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
           </div>
         </div>
 
-        {/* Student Session Stats, Audio Cue Toggle & Reset Button */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        {/* Header Controls: Two-Way Voice Toggle, Audio Cue & Reset */}
+        <div className="flex items-center gap-2 sm:gap-2.5">
+          {/* Two-Way Conversational Voice Mode Toggle */}
+          <button
+            type="button"
+            onClick={() => {
+              const nextVal = !twoWayVoiceMode;
+              setTwoWayVoiceMode(nextVal);
+              twoWayVoiceModeRef.current = nextVal;
+              if (!nextVal) {
+                stopSpeaking();
+                setIsCoachSpeaking(false);
+              }
+            }}
+            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer border ${
+              twoWayVoiceMode
+                ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/25 shadow-sm shadow-emerald-950/40'
+                : 'bg-slate-800 text-slate-400 border-slate-700/60 hover:text-slate-300'
+            }`}
+            title="Two-Way Voice Mode: Coach speaks responses aloud and automatically listens for your verbal reply"
+          >
+            <Headphones className={`w-3.5 h-3.5 ${twoWayVoiceMode ? 'text-emerald-400' : 'text-slate-500'}`} />
+            <span className="hidden sm:inline">
+              {twoWayVoiceMode ? '2-Way Voice: On' : '2-Way Voice: Off'}
+            </span>
+          </button>
+
           {/* Audio Cue Notification Toggle */}
           <button
             type="button"
@@ -429,28 +502,28 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
               const nextVal = !audioCueEnabled;
               setAudioCueEnabled(nextVal);
               if (nextVal) {
-                playCoachResponseChime(); // subtle preview sound
+                playCoachResponseChime();
               }
             }}
-            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer border ${
+            className={`flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer border ${
               audioCueEnabled
                 ? 'bg-amber-500/15 text-amber-300 border-amber-500/40 hover:bg-amber-500/25'
                 : 'bg-slate-800 text-slate-400 border-slate-700/60 hover:text-slate-300'
             }`}
-            title={audioCueEnabled ? 'Voice Response Audio Cue: Active (Click to mute)' : 'Voice Response Audio Cue: Muted (Click to enable)'}
+            title={audioCueEnabled ? 'Audio Chime Cue: On' : 'Audio Chime Cue: Off'}
           >
             {audioCueEnabled ? (
               <Bell className="w-3.5 h-3.5 text-amber-400" />
             ) : (
               <BellOff className="w-3.5 h-3.5 text-slate-500" />
             )}
-            <span className="hidden md:inline">{audioCueEnabled ? 'Audio Cue: On' : 'Muted'}</span>
           </button>
 
-          <div className="hidden sm:flex items-center gap-2 bg-slate-800/80 px-2.5 py-1 rounded-lg border border-slate-700/60 text-xs">
+          <div className="hidden md:flex items-center gap-1.5 bg-slate-800/80 px-2.5 py-1 rounded-lg border border-slate-700/60 text-xs">
             <Flame className="w-3.5 h-3.5 text-orange-400" />
-            <span className="text-slate-300 font-semibold">{profile.completedLessons} Lessons</span>
+            <span className="text-slate-300 font-semibold">{profile.completedLessons}</span>
           </div>
+
           <button
             onClick={handleResetChat}
             className="flex items-center gap-1 px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-medium transition-colors cursor-pointer border border-slate-700/60"
@@ -539,7 +612,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
               <span className="w-2 h-2 rounded-full bg-red-500 animate-bounce"></span>
               <span className="w-2 h-2 rounded-full bg-amber-500 animate-bounce [animation-delay:0.2s]"></span>
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-bounce [animation-delay:0.4s]"></span>
-              <span className="text-slate-300 ml-1">Coach is analyzing your technique...</span>
+              <span className="text-slate-300 ml-1">Master Coach is formulating your training response...</span>
             </div>
           </div>
         )}
@@ -547,18 +620,50 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Web Speech API Live Status Indicator Bar */}
+      {/* Two-Way Conversational Mode: Coach Speaking Status Indicator */}
+      {isCoachSpeaking && (
+        <div className="bg-gradient-to-r from-emerald-950 via-slate-900 to-slate-950 border-t border-emerald-800/80 px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 animate-in fade-in duration-200">
+          <div className="flex items-center gap-3">
+            <div className="relative flex items-center justify-center w-5 h-5">
+              <span className="w-4 h-4 rounded-full bg-emerald-500 animate-ping absolute"></span>
+              <span className="w-3 h-3 rounded-full bg-emerald-400 relative"></span>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs text-emerald-300 font-bold">
+              <span>🥋 Master Coach Speaking... (Answering aloud)</span>
+              <div className="flex items-end gap-1 h-3.5 px-1 py-0.5 bg-slate-950 rounded border border-slate-800">
+                <span className="w-1 rounded-sm bg-emerald-400 h-full animate-bounce" />
+                <span className="w-1 rounded-sm bg-emerald-400 h-3/4 animate-bounce [animation-delay:0.15s]" />
+                <span className="w-1 rounded-sm bg-amber-400 h-full animate-bounce [animation-delay:0.3s]" />
+                <span className="w-1 rounded-sm bg-red-400 h-1/2 animate-bounce [animation-delay:0.45s]" />
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => {
+              stopSpeaking();
+              setIsCoachSpeaking(false);
+            }}
+            className="flex items-center gap-1 px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-semibold transition-all border border-slate-700 cursor-pointer"
+          >
+            <Square className="w-3 h-3 fill-current text-amber-400" />
+            <span>Mute Coach</span>
+          </button>
+        </div>
+      )}
+
+      {/* Web Speech API Live Status Indicator Bar (When user is recording/speaking) */}
       {isListening && (
         <div className="bg-gradient-to-r from-red-950 via-slate-900 to-slate-950 border-t border-red-800/80 px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 animate-in fade-in duration-200">
           <div className="flex items-center gap-3">
-            {/* Pulsing Mic Indicator */}
             <div className="relative flex items-center justify-center w-5 h-5">
               <span className={`w-4 h-4 rounded-full absolute ${isSpeaking ? 'bg-emerald-500 animate-ping' : 'bg-red-500 animate-pulse'}`}></span>
               <span className={`w-3 h-3 rounded-full relative ${isSpeaking ? 'bg-emerald-400' : 'bg-red-500'}`}></span>
             </div>
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-xs">
-              {/* Dynamic Speaking Status Indicator */}
               <div className="flex items-center gap-1.5 font-bold">
                 {isSpeaking ? (
                   <span className="text-emerald-400 flex items-center gap-1.5">
@@ -573,7 +678,6 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
                 )}
               </div>
 
-              {/* Animated Sound Wave Equalizer */}
               <div className="flex items-end gap-1 h-3.5 px-1 py-0.5 bg-slate-950 rounded border border-slate-800">
                 <span className={`w-1 rounded-sm bg-emerald-400 transition-all ${isSpeaking ? 'h-full animate-bounce' : 'h-1'}`} />
                 <span className={`w-1 rounded-sm bg-emerald-400 transition-all [animation-delay:0.15s] ${isSpeaking ? 'h-3/4 animate-bounce' : 'h-1'}`} />
@@ -584,7 +688,6 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
           </div>
 
           <div className="flex items-center gap-2">
-            {/* Stop Voice Recording Button */}
             <button
               type="button"
               onClick={handleToggleVoiceRecording}
@@ -597,7 +700,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
         </div>
       )}
 
-      {/* Live Interim Transcript Bubble (Shows words as they are being spoken) */}
+      {/* Live Interim Transcript Bubble */}
       {isListening && interimTranscript && (
         <div className="bg-slate-950/90 border-t border-slate-800 px-4 py-2 text-xs flex items-center gap-2 text-amber-300 italic animate-in fade-in">
           <span className="text-slate-400 font-normal not-italic">Hearing:</span>
@@ -617,7 +720,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
           </div>
           <button
             type="button"
-            onClick={handleToggleVoiceRecording}
+            onClick={startListening}
             className="px-2.5 py-1 bg-red-800 hover:bg-red-700 text-white rounded text-[11px] font-bold shrink-0 cursor-pointer"
           >
             Try Again
@@ -657,7 +760,7 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
             title={
               isListening
                 ? 'Microphone Active: Click to Stop Recording'
-                : 'Enable Microphone (Web Speech API Voice-to-Text)'
+                : 'Enable Microphone (2-Way Voice Conversation)'
             }
           >
             {isListening ? (
@@ -666,7 +769,6 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
               <Mic className="w-5 h-5 text-red-400" />
             )}
 
-            {/* Speaking active dot badge */}
             {isListening && isSpeaking && (
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-slate-950 animate-ping"></span>
             )}
@@ -683,6 +785,8 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
                   ? isSpeaking
                     ? 'Transcribing speech in real-time...'
                     : 'Listening... (Speak your question to Coach)'
+                  : isCoachSpeaking
+                  ? 'Coach is speaking aloud...'
                   : t.chat.placeholder
               }
               className="w-full bg-slate-900 border border-slate-700/80 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
@@ -707,23 +811,46 @@ export const AICoachChat: React.FC<AICoachChatProps> = ({
             <span>Kukkiwon-aligned syllabus • Student: {profile.name} ({profile.belt})</span>
           </div>
 
-          <div className="flex items-center gap-1.5">
-            <span
-              className={`w-2 h-2 rounded-full ${
-                isListening
+          <div className="flex items-center gap-2">
+            {twoWayVoiceMode && (
+              <span className="inline-flex items-center gap-1 text-[10px] text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-1.5 py-0.5 rounded">
+                <Headphones className="w-3 h-3" />
+                <span>Two-Way Voice Mode</span>
+              </span>
+            )}
+
+            <div className="flex items-center gap-1.5">
+              <span
+                className={`w-2 h-2 rounded-full ${
+                  isListening
+                    ? isSpeaking
+                      ? 'bg-emerald-400 animate-ping'
+                      : 'bg-red-400 animate-pulse'
+                    : isCoachSpeaking
+                    ? 'bg-amber-400 animate-bounce'
+                    : 'bg-slate-600'
+                }`}
+              />
+              <span
+                className={
+                  isListening
+                    ? isSpeaking
+                      ? 'text-emerald-400 font-bold'
+                      : 'text-red-300 font-medium'
+                    : isCoachSpeaking
+                    ? 'text-amber-400 font-semibold'
+                    : 'text-slate-500'
+                }
+              >
+                {isListening
                   ? isSpeaking
-                    ? 'bg-emerald-400 animate-ping'
-                    : 'bg-red-400 animate-pulse'
-                  : 'bg-slate-600'
-              }`}
-            />
-            <span className={isListening ? (isSpeaking ? 'text-emerald-400 font-bold' : 'text-red-300 font-medium') : 'text-slate-500'}>
-              {isListening
-                ? isSpeaking
-                  ? 'Speaking Detected'
-                  : 'Mic Active'
-                : 'Web Speech API Ready'}
-            </span>
+                    ? 'Speaking Detected'
+                    : 'Mic Active'
+                  : isCoachSpeaking
+                  ? 'Coach Speaking'
+                  : 'Web Speech API Ready'}
+              </span>
+            </div>
           </div>
         </div>
       </div>

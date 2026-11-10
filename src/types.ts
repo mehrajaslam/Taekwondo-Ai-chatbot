@@ -95,3 +95,35 @@ export interface DailyWorkout {
   coolDown: string[];
   coachesNote: string;
 }
+
+export interface TrainingSessionRecord {
+  week: string;
+  date: string;
+  totalHours: number;
+  poomsaeHours: number;
+  sparringHours: number;
+  theoryHours: number;
+  conditioningHours: number;
+}
+
+export interface QuizScoreRecord {
+  id: string;
+  date: string;
+  title: string;
+  category: 'Korean Terms' | 'Poomsae Theory' | 'WT Sparring Rules' | 'Dan Board Oral';
+  score: number;
+  passingScore: number;
+  belt: BeltLevel;
+}
+
+export interface BeltMilestone {
+  belt: BeltLevel;
+  date: string;
+  status: 'achieved' | 'current' | 'upcoming';
+  requiredHours: number;
+  completedHours: number;
+  examiner: string;
+  dojang: string;
+  certificateNumber?: string;
+}
+

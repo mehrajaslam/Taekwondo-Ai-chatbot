@@ -1,5 +1,11 @@
-export function speakText(text: string, lang: string = 'en') {
+export function speakText(
+  text: string,
+  lang: string = 'en',
+  onEnd?: () => void,
+  onStart?: () => void
+) {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+    if (onEnd) onEnd();
     return;
   }
 
@@ -20,6 +26,14 @@ export function speakText(text: string, lang: string = 'en') {
     utterance.lang = 'ar-SA';
   } else {
     utterance.lang = 'en-US';
+  }
+
+  if (onStart) {
+    utterance.onstart = () => onStart();
+  }
+  if (onEnd) {
+    utterance.onend = () => onEnd();
+    utterance.onerror = () => onEnd();
   }
 
   window.speechSynthesis.speak(utterance);

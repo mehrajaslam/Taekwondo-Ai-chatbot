@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Globe, Award, Info, Sparkles } from 'lucide-react';
+import { Shield, Globe, Award, Info, Sparkles, TrendingUp } from 'lucide-react';
 import { Language, BeltLevel, StudentProfile } from '../types';
 import { translations } from '../translations';
 import { BELT_LEVELS } from '../data/taekwondoData';
@@ -29,6 +29,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navItems = [
     { id: 'chat', label: t.nav.coachChat },
+    { id: 'progress', label: t.nav.progress },
     { id: 'exam', label: t.nav.danExam },
     { id: 'poomsae', label: t.nav.poomsae },
     { id: 'terms', label: t.nav.terminology },
@@ -168,6 +169,7 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 {item.id === 'exam' && <Award className="w-3.5 h-3.5 text-amber-400" />}
                 {item.id === 'chat' && <Sparkles className="w-3.5 h-3.5 text-amber-300" />}
+                {item.id === 'progress' && <TrendingUp className="w-3.5 h-3.5 text-red-400" />}
                 {item.label}
               </button>
             );

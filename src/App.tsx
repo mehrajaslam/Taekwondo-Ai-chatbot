@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { AICoachChat } from './components/AICoachChat';
+import { StudentProgress } from './components/StudentProgress';
 import { DanExamHall } from './components/DanExamHall';
 import { PoomsaeMaster } from './components/PoomsaeMaster';
 import { KoreanTerminology } from './components/KoreanTerminology';
@@ -89,6 +90,16 @@ export default function App() {
               setProfile((prev) => ({ ...prev, belt: belt as BeltLevel }));
               setCurrentTab('exam');
             }}
+          />
+        )}
+
+        {currentTab === 'progress' && (
+          <StudentProgress
+            language={language}
+            profile={profile}
+            setProfile={setProfile}
+            onOpenExamHall={() => setCurrentTab('exam')}
+            onOpenWorkout={() => setCurrentTab('workout')}
           />
         )}
 
